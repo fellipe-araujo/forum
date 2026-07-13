@@ -1,0 +1,9 @@
+services:
+  forumdb:
+    image: bitnami/postgresql
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRESQL_USERNAME=${DATABASE_USER}
+      - POSTGRESQL_PASSWORD=${DATABASE_PASS}
+      - POSTGRESQL_DATABASE=${DATABASE_NAME}
