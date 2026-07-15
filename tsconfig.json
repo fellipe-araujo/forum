@@ -9,13 +9,16 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
-    "target": "ES2023",
+    "target": "es2023",
     "sourceMap": true,
     "outDir": "./dist",
     "rootDir": "./",
     "paths": {
       "@/*": ["./src/*"]
     },
+    "types": [
+      "vitest/globals"
+    ],
     "incremental": true,
     "skipLibCheck": true,
     "strict": true,
