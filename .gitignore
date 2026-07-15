@@ -38,6 +38,10 @@ lerna-debug.log*
 # Databse
 data
 
+# JWT Keys
+*.pem
+*base64.txt
+
 # dotenv environment variable files
 .env
 .env.development.local
