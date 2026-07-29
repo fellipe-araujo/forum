@@ -6,6 +6,7 @@ import { QuestionAttachmentsRepository } from '@/domain/forum/application/reposi
 import { Question } from '@/domain/forum/enterprise/entities/question'
 import { QuestionAttachment } from '@/domain/forum/enterprise/entities/question-attachment'
 import { QuestionAttachmentList } from '@/domain/forum/enterprise/entities/question-attachment-list'
+import { Injectable } from '@nestjs/common'
 import { QuestionsRepository } from '../repositories/questions-repository'
 
 interface EditQuestionUseCaseRequest {
@@ -23,6 +24,7 @@ type EditQuestionUseCaseResponse = Either<
   }
 >
 
+@Injectable()
 export class EditQuestionUseCase {
   constructor(
     private questionsRepository: QuestionsRepository,
