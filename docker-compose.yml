@@ -7,3 +7,10 @@ services:
       - POSTGRESQL_USERNAME=${DATABASE_USER}
       - POSTGRESQL_PASSWORD=${DATABASE_PASS}
       - POSTGRESQL_DATABASE=${DATABASE_NAME}
+  cache:
+    container_name: forum-cache
+    image: redis
+    ports:
+      - 6379:6379
+    volumes:
+      - ./data/redis:/data
